@@ -28,3 +28,16 @@ spec:
         - |
           echo "Hello from Pod: $POD_NAME" > /usr/share/nginx/html/index.html
           nginx -g 'daemon off;'
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  type: NodePort
+  ports:
+  - targetPort: 80
+    port: 80
+    nodePort: 30000
+  selector:
+    app: nginx-demo

@@ -1,3 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: nginx
+  name: nginx
+spec:
+  #nodeName: ista-worker
+  containers:
+  - image: nginx
+    name: nginx
+---
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:

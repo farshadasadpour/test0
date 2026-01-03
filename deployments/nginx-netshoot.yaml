@@ -22,11 +22,11 @@ spec:
 
       - name: netshoot
         image: nicolaka/netshoot
-        command: ["/bin/bash"]
+        command: [ "/bin/bash" ]
         args:
-          - -c
-          - |
-            while true; do
-              ping -c 1 localhost
-              sleep 60
-            done
+        - -c
+        - |
+          while true; do
+            ping -c 1 localhost
+            sleep 60
+          done
