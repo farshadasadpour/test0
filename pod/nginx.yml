@@ -5,7 +5,9 @@ metadata:
     run: nginx
   name: nginx
 spec:
-  #nodeName: ista-worker
+  # nodeName: ista-worker
+  # Nodeselector:
+  #   size: Large
   containers:
   - image: nginx
     name: nginx
